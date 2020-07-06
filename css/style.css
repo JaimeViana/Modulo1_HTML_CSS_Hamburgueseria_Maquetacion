@@ -1,0 +1,35 @@
+@import url(reset.css); /*importamos otra hoja de css a través de una ruta relativa*/
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
+
+/*
+handlee y montserrat 400, 700
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+/* Vamos a crear variables globales con :root para que sea más sencillo cambiar estilos a varios elementos en repetidas ocasiones. */
+:root {
+    --color-principal: #fa573a;
+    --color-secundario: #21242e;
+    --fuentePrincipal: font-family: 'Montserrat', sans-serif;
+    --fuenteSecundaria: font-family: 'Handlee', cursive;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
