@@ -8,6 +8,8 @@ font-family: 'Handlee', cursive;
 font-family: 'Montserrat', sans-serif;
 */
 
+/* video --> 15:10 revisar comentarios de Juan Pedro e implementar. Muy buenos*/
+
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -19,8 +21,8 @@ font-family: 'Montserrat', sans-serif;
 :root {
     --color-principal: #fa573a;
     --color-secundario: #21242e;
-    --fuentePrincipal: font-family: 'Montserrat', sans-serif;
-    --fuenteSecundaria: font-family: 'Handlee', cursive;
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteSecundaria: 'Handlee', cursive;
     --anchoMaximo: 1100px;
 }
 
@@ -159,4 +161,91 @@ footer a:hover {
         padding: 5px 20px;
         border-bottom: 0px;
     }
+}
+
+/* inicio hero*/
+
+.hero {
+    background-image: url('../images/fondo.jpg');
+    height: 70vh;
+    background-repeat: no-repeat; /*para quitar la repetición de la imagen*/
+    background-size: cover; /*y con esta propiedad cubre el 100% del contenedor*/
+    background-position: center center; /*aquí jugamos con la posición concreta de la imagen, para focalizar en lo que queramos mostrar*/
+    background-color: #999; 
+    background-blend-mode: multiply;/*para degradar y oscurecer el fondo, fusionando con el color de fondo la imagen. NO utilizamos opacity porque afecta a todo el div, no solo a la imagen del background*/
+    display: flex; /*este me alinea la horizontal. centra el único elemento que contiene (container) en el centro del escenario*/
+
+    /*SOLUCIÓN MÁS SIMPLE (video --> 13:25 del 07/07):
+    display: flex
+    align-items: center
+    
+    y en .hero .container {
+        width: 100% 
+        }  --- ¡¡¡con solo tres líneas de código me libro de toda la movida!!! ---
+    */
+}
+
+.hero .container {
+    display: flex; /*este me alinea en la vertical*/
+    flex-direction: column; /*reseteo el estado en columna, para que no se me alineen, que es lo que ocurre al introducir flex*/
+    justify-content: center;
+    width: 90%;
+}
+
+.hero h1 {
+    font-family: var(--fuenteSecundaria);
+    font-size: 2.5em;
+    color: white;
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 1.5em;
+    margin: 1em 0; /*al tener impares si solo uso margin en 2 me completa los demás*/
+}
+
+.hero p {
+    font-size: 1.15em;
+    color: white;
+}
+
+/*siempre que haya elementos que se repitan en estilo, no debemos utilizar herencia sino poner una clase concreta para estos elementos, pudiendo repetir tantas veces como aparezca*/ 
+.boton {
+    display: inline-block; /*colocate en linea comportándote como un bloque*/
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1.15em;
+    text-decoration: none;
+    margin: 1em 0;
+    border: 1px solid var(--color-principal); /*truquito para poner el border que luego se verá en el hover y así que no dé saltos la imagen al hacer scroll*/
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+}
+
+.boton i {
+    transition: transform 0.5s; /*si pongo 'transform' solo afecta a la transición (una traslación en este caso)*/
+}
+
+.boton:hover i{
+    transform: translateX(5px); /*para el efecto de la flecha en el boton*/
+    /*transition: 1s; aquí solo afectaría a la ida, no a la vuelta del hover. Habría que atacar al elemento i dentro del boton (ver arriba)*/
+}
+    
+.hero .social li {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 1em;
+    /*el color no va en el li, si no en el a*/
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* fin hero */
 }
