@@ -248,4 +248,11 @@ footer a:hover {
 }
 
 /* fin hero */
+
+
+/* inicio main*/
+
+/* salvamos la distancia con el footer fixed añadiendo un margin bottom al main */
+main {
+    margin-bottom: 90px;
 }
