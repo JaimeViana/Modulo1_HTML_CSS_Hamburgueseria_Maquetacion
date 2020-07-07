@@ -256,3 +256,94 @@ footer a:hover {
 main {
     margin-bottom: 90px;
 }
+/*si no es importante para mi el color de fondo uso un margin, si es importante uso un padding*/
+main section {
+    padding: 2.125em 0;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--color-principal);
+}
+
+main section .underline {
+    position: relative;
+    width: 5em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+main section .underline hr {
+    border-color: var(--color-principal); /*tiene un bisel que podemos corregir a través del atributo noshade con el valor "noshade".*/
+    position: absolute;
+    width: 100%;
+    top: -0.063em;
+}
+
+/*esta sección va a tener un tamaño de caja determinado, por eso utilizo #ourservices*/
+main #ourservices .flex {
+    flex-wrap: wrap; /*para poder modificar la estructura de las cajas cuando lo haga responsive para otros tipos de pantalla*/
+    padding: 0 0.825em; 
+}
+
+main #ourservices .flex article {
+    width: 100%;
+    padding: 1.825em 0;
+    border-bottom: 1px solid #aaa;
+}
+
+main #ourservices .flex article div i {
+    color: var(--color-principal);
+    font-size: 2em;
+    padding: 0.5em;
+    border: 2px solid var(--color-principal);
+}
+
+main #ourservices .flex article div .fa-truck {
+    transform: rotateY(180deg);
+}
+
+main #ourservices .flex article h3 {
+    font-weight: 700; /*ponemos 700 para utilizar la negrita que nos hemos traido con googlefonts*/
+    margin: 1em 0;
+}
+
+.enlace {
+    text-decoration: none;
+    display: block; /*para que el enlace pueda tener un margin, siendo aquel un elemento en línea*/
+    margin: 1em 0;
+    color: var(--color-principal);
+}
+
+@media(min-width: 48.00em) {
+    main #ourservices .flex article {
+        width: 50%;
+        padding: 1.825em;
+        border-bottom: 0px;
+        border-left: 1px solid #aaa;
+        margin-bottom: 1em;
+    }
+
+    main #ourservices .flex article:last-child {
+        width: 100%;
+    }
+}
+
+@media(min-width: 62.750em) {
+    main #ourservices .flex article {
+        width: 33.333333%;
+    }
+
+    main #ourservices .flex article:last-child {
+        width: 33.333333%;
+    }
+}
