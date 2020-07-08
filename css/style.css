@@ -347,3 +347,54 @@ main #ourservices .flex article h3 {
         width: 33.333333%;
     }
 }
+
+/* fin our services */
+
+/* inicio sección about us*/
+
+main #aboutus .flex {
+    flex-direction: column; /*me lo pone en columnas (sin porcentajes). una opción es flex-wrap: wrrap; junto con un width: 100% (ancho de la columna), por ejemplo; y otra en una sola regla es esta de aquí.*/
+}
+
+main #aboutus .flex .columna {
+    padding: 0.825em;
+}
+
+main #aboutus .flex .columna h3 {
+    font-weight: 700;
+}
+
+main #aboutus .flex .columna h4 {
+    color: var(--color-principal);
+    margin: 1em 0;
+}
+
+/*hacemos primero el marco de la foto*/
+main #aboutus .marco {
+    border: 3px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    width: 90%;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+main #aboutus .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
+    transform: rotateZ(0deg);
+}
+
+
+
+@media(min-width: 48.000em) {
+    main #aboutus .flex {
+        flex-direction: row;
+    }
+}
+
+/* fin sección about us */
+
+/* fin main */
