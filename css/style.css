@@ -353,7 +353,7 @@ main #ourservices .flex article h3 {
 /* inicio sección about us*/
 
 main #aboutus .flex {
-    flex-direction: column; /*me lo pone en columnas (sin porcentajes). una opción es flex-wrap: wrrap; junto con un width: 100% (ancho de la columna), por ejemplo; y otra en una sola regla es esta de aquí.*/
+    flex-direction: column; /*me lo pone en columnas (sin porcentajes). una opción es flex-wrap: wrap; junto con un width: 100% (ancho de la columna), por ejemplo; y otra en una sola regla es esta de aquí.*/
 }
 
 main #aboutus .flex .columna {
@@ -388,7 +388,6 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
 }
 
 
-
 @media(min-width: 48.000em) {
     main #aboutus .flex {
         flex-direction: row;
@@ -396,5 +395,42 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
 }
 
 /* fin sección about us */
+
+/* inicio sección our blog*/
+
+main #ourblog .flex {
+    flex-direction: row;
+}
+
+main #ourblog .flex .columna {
+    padding: 0.825em;
+}
+
+main #ourblog .flex .columna h3 {
+    font-weight: 00;
+    font-size: 1.250em;
+    padding-top: 0.825em;
+}
+
+main #ourblog .flex .columna h4 {
+    font-weight: 700;
+    color: var(--color-principal);
+    margin: 1em 0;
+}
+
+main #ourblog .flex .columna p {
+    color: #999;
+}
+
+main #ourblog .flex .columna a {
+    background-color: white;
+    color: var(--color-principal);
+    border: 0;
+    font-weight: 700;
+    padding-left: 0;
+}
+
+
+/* fin sección our blog*/
 
 /* fin main */
