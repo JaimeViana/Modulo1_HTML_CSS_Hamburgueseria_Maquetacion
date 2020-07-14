@@ -461,4 +461,48 @@ main #ourblog .flex .columna .imagen .fecha p {
 
 /* fin sección our blog*/
 
+
+
+/* inicio sección menu */
+
+main #menu {
+    background-color: var(--color-secundario);
+    color: #999
+}
+
+main #menu .flex {
+    flex-wrap: wrap;
+    padding: 0 0.825em; 
+}
+
+main #menu .flex article {
+    width: 100%;
+    padding: 1.825em 0;
+}
+
+main #menu .flex article .lista {
+    width: 100%;
+}
+
+main #menu .flex article .lista li {
+    padding: 0.825em;
+}
+
+main #menu .flex article .lista a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+}
+
+main #menu .flex article .lista li .activo {
+    background-color: var(--color-principal);
+}
+
+main #menu .flex article .lista li a:hover {
+    background-color: var(--color-principal);
+}
+
+
+/* fin seccion menu */
 /* fin main */
