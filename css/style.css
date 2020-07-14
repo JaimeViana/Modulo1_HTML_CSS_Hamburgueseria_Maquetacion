@@ -470,9 +470,13 @@ main #menu {
     color: #999
 }
 
+main #menu h2 {
+    color: white;
+}
+
 main #menu .flex {
-    flex-wrap: wrap;
-    padding: 0 0.825em; 
+    flex-direction: column;
+    padding: 0 0.825em;
 }
 
 main #menu .flex article {
@@ -484,15 +488,12 @@ main #menu .flex article .lista {
     width: 100%;
 }
 
-main #menu .flex article .lista li {
-    padding: 0.825em;
-}
-
-main #menu .flex article .lista a {
+main #menu .flex article .lista li a {
     display: block;
     text-decoration: none;
     color: white;
-    background-color: blue;
+    height: 2em;
+    border-radius: 2%;
 }
 
 main #menu .flex article .lista li .activo {
@@ -503,6 +504,50 @@ main #menu .flex article .lista li a:hover {
     background-color: var(--color-principal);
 }
 
+main #menu .flex article h3 {
+    color: white;
+    font-weight: 700;
+    padding: 0.825em 0.825em 0.825em 0;
+}
+
+main #menu .flex article hr {
+    border-color: var(--color-principal);
+    width: 25%;
+    margin-left: 0;
+}
+
+main #menu .flex article p {
+    line-height: 1.650em;
+}
+
+main #menu .flex .columna {
+    width: 95%;
+    margin: 0 auto;
+}
+
+main #menu .flex .columna span {
+    color: var(--color-principal);
+}
+
+@media(min-width: 48.000em) {
+
+    main #menu .flex {
+        flex-direction: row;
+    }
+
+    main #menu .flex .columna {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left {
+        width: 30%;
+        margin-right: 1.500em;
+    }
+}
+
+    
 
 /* fin seccion menu */
 /* fin main */
