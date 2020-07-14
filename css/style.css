@@ -443,7 +443,6 @@ main #ourblog .flex .columna .imagen .fecha {
     position: absolute;
     top: 0px;
     left: 0px;
-    text-align: center;
 }
 
 main #ourblog .flex .columna .imagen .fecha p {
@@ -451,6 +450,9 @@ main #ourblog .flex .columna .imagen .fecha p {
     height: 100%;
     font-weight: 700;
     font-size: 120%;
+    display: flex;
+    align-items: center;
+    padding-left: 0.600em;
 }
 
 @media(min-width: 48.000em) {
@@ -494,6 +496,8 @@ main #menu .flex article .lista li a {
     color: white;
     height: 2em;
     border-radius: 2%;
+    display: flex;
+    align-items: center;
 }
 
 main #menu .flex article .lista li .activo {
