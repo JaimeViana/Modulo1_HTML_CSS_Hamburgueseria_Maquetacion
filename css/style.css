@@ -400,10 +400,12 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
 
 main #ourblog .flex {
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 main #ourblog .flex .columna {
-    padding: 0.825em;
+    width: 50%;
+    padding: 0.825em;   
 }
 
 main #ourblog .flex .columna h3 {
@@ -419,7 +421,7 @@ main #ourblog .flex .columna h4 {
 }
 
 main #ourblog .flex .columna p {
-    color: #999;
+    color: #444;
 }
 
 main #ourblog .flex .columna a {
@@ -430,6 +432,32 @@ main #ourblog .flex .columna a {
     padding-left: 0;
 }
 
+main #ourblog .flex .columna .imagen {
+    position: relative;
+}
+
+main #ourblog .flex .columna .imagen .fecha {
+    background-color: rgb(250, 87, 58, 0.8);
+    width: 25%;
+    height: 33.3333%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+
+main #ourblog .flex .columna .imagen .fecha p {
+    color:white;
+    height: 100%;
+    font-weight: 700;
+    font-size: 120%;
+}
+
+@media(min-width: 48.000em) {
+    main #ourblog .flex .columna {
+        width: 33.3333%;   
+    }
+}
 
 /* fin sección our blog*/
 
